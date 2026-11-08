@@ -1,0 +1,42 @@
+/* =====================================
+   PÁGINA CONTATO
+   (a base vem do geral.css)
+===================================== */
+
+/* A página é curta: o conteúdo ocupa a tela toda e o rodapé fica embaixo */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    flex: 1;
+
+    min-height: 80px;
+    padding: 230px 20px 60px;
+}
+
+.banner p {
+    font-size: 24px;
+}
+
+@media (max-width: 650px) {
+
+    .banner {
+        padding: 140px 20px 40px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+}

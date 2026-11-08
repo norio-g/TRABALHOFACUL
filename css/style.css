@@ -1,0 +1,300 @@
+/* =====================================
+   ÁREA DE PESQUISA
+   (usada na página inicial e em Imóveis)
+===================================== */
+
+main > section:nth-of-type(2) {
+    position: relative;
+    z-index: 3;
+
+    max-width: 1000px;
+    margin: -120px auto 80px;
+    padding: 30px 35px;
+
+    background-color: var(--branco);
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(24, 35, 52, 0.15);
+}
+
+main > section:nth-of-type(2) h2 {
+    margin-bottom: 25px;
+
+    font-size: 23px;
+    text-align: center;
+    color: var(--preto);
+}
+
+/* Formulário */
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+
+    align-items: end;
+    gap: 8px 12px;
+}
+
+form label {
+    display: block;
+    grid-row: 1;
+
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--preto);
+}
+
+form label:nth-of-type(1) {
+    grid-column: 1;
+}
+
+form label:nth-of-type(2) {
+    grid-column: 2;
+}
+
+form label:nth-of-type(3) {
+    grid-column: 3;
+}
+
+form label:nth-of-type(4) {
+    grid-column: 4;
+}
+
+/* Campos */
+
+form select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
+
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    font-size: 14px;
+
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form select:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 2px rgba(228, 200, 153, 0.2);
+}
+
+/* Posicionamento dos campos */
+
+#cidade {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#tipo {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#valor {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#quartos {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+/* Botão pesquisar */
+
+form button {
+    grid-column: 5;
+    grid-row: 2;
+
+    height: 42px;
+    padding: 0 30px;
+
+    border: none;
+    border-radius: 3px;
+
+    background-color: var(--dourado);
+    color: var(--preto);
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--preto);
+    color: var(--dourado);
+}
+
+/* =====================================
+   LISTA DE IMÓVEIS (destaques / disponíveis)
+===================================== */
+
+main > section:nth-of-type(3) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 30px 8% 80px;
+    text-align: center;
+    background-color: var(--branco);
+}
+
+main > section:nth-of-type(3) > h2 {
+    flex-basis: 100%;
+
+    margin-bottom: 12px;
+
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--preto);
+}
+
+main > section:nth-of-type(3) > p {
+    flex-basis: 100%;
+
+    margin-bottom: 40px;
+
+    color: var(--cinza-escuro);
+    font-size: 16px;
+}
+
+/* Cartões dos imóveis */
+
+article {
+    width: 300px;
+    overflow: hidden;
+
+    background-color: var(--branco);
+    border: 1px solid rgba(140, 145, 153, 0.3);
+    border-radius: 5px;
+
+    text-align: left;
+    box-shadow: 0 3px 15px rgba(24, 35, 52, 0.08);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(24, 35, 52, 0.15);
+}
+
+article img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+article h3 {
+    margin: 18px 18px 10px;
+    font-size: 21px;
+    color: var(--preto);
+}
+
+article p {
+    margin: 8px 18px;
+    color: var(--cinza-escuro);
+    font-size: 14px;
+}
+
+article p:nth-of-type(2) {
+    color: var(--preto);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* Link do imóvel */
+
+article a {
+    display: block;
+
+    margin: 18px;
+    padding: 12px;
+
+    text-align: center;
+    background-color: var(--dourado);
+    color: var(--preto);
+    border-radius: 3px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+article a:hover {
+    background-color: var(--preto);
+    color: var(--dourado);
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 900px) {
+
+    /* Formulário em uma coluna: cada rótulo fica acima do seu campo.
+       Os seletores com :nth-of-type precisam ser repetidos aqui, porque
+       são mais específicos que "form label" e senão continuariam valendo. */
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    form label,
+    form label:nth-of-type(1),
+    form label:nth-of-type(2),
+    form label:nth-of-type(3),
+    form label:nth-of-type(4),
+    #cidade,
+    #tipo,
+    #valor,
+    #quartos,
+    form button {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    form select {
+        margin-bottom: 12px;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    main > section:nth-of-type(2) {
+        margin: -90px 20px 60px;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 650px) {
+
+    main > section:nth-of-type(2) {
+        margin: -90px 15px 50px;
+        padding: 25px 18px;
+    }
+
+    main > section:nth-of-type(3) {
+        padding: 20px 15px 50px;
+    }
+
+    main > section:nth-of-type(3) > h2 {
+        font-size: 27px;
+    }
+
+    article {
+        width: 100%;
+        max-width: 350px;
+    }
+}

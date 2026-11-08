@@ -1,0 +1,160 @@
+/* =====================================
+   PÁGINAS DE DETALHES DO IMÓVEL
+   (a base vem do geral.css)
+===================================== */
+
+.banner {
+    min-height: 80px;
+    padding: 230px 20px 60px;
+}
+
+.detalhe {
+    max-width: 1100px;
+    margin: 50px auto 80px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+/* ----- Galeria de fotos (carrossel) ----- */
+
+.galeria img {
+    display: block;
+    width: 100%;
+    height: 560px;
+
+    object-fit: contain;
+    background-color: var(--preto);
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(24, 35, 52, 0.15);
+}
+
+/* Controles criados pelo JavaScript (js/carrossel.js) */
+
+.galeria figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 14px;
+}
+
+.galeria button {
+    padding: 10px 24px;
+
+    border: none;
+    border-radius: 3px;
+
+    background-color: var(--dourado);
+    color: var(--preto);
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.galeria button:hover {
+    background-color: var(--preto);
+    color: var(--dourado);
+}
+
+.galeria figcaption span {
+    font-size: 14px;
+    color: var(--cinza-escuro);
+}
+
+/* ----- Informações do imóvel ----- */
+
+.detalhe-info h2 {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+    color: var(--preto);
+}
+
+.detalhe-info h3 {
+    margin: 24px 0 10px;
+
+    font-size: 20px;
+    color: var(--preto);
+}
+
+.detalhe-info ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.detalhe-info li {
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--cinza-escuro);
+}
+
+.detalhe-info p {
+    margin-bottom: 12px;
+
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--cinza-escuro);
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.botoes a {
+    padding: 12px 24px;
+
+    border-radius: 3px;
+    background-color: var(--dourado);
+    color: var(--preto);
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botoes a:hover {
+    background-color: var(--preto);
+    color: var(--dourado);
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .detalhe {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: 480px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .banner {
+        padding: 140px 20px 40px;
+    }
+
+    .galeria img {
+        height: 380px;
+    }
+
+    .detalhe-info h2 {
+        font-size: 26px;
+    }
+}

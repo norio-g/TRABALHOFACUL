@@ -1,0 +1,72 @@
+/* =====================================
+   PÁGINA SOBRE
+   (a base vem do geral.css)
+===================================== */
+
+.banner {
+    min-height: 80px;
+    padding: 230px 20px 60px;
+}
+
+/* Seções de texto */
+
+.apresentacao,
+.historia,
+.missao,
+.servicos {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px 10px;
+
+    text-align: center;
+}
+
+.apresentacao h1 {
+    margin-bottom: 15px;
+
+    font-size: 38px;
+    text-transform: uppercase;
+    color: var(--preto);
+}
+
+.historia h2,
+.missao h2,
+.servicos h2 {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+
+    font-size: 26px;
+    color: var(--preto);
+    border-bottom: 3px solid var(--dourado);
+}
+
+.apresentacao p,
+.historia p,
+.missao p,
+.servicos p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--cinza-escuro);
+}
+
+.servicos {
+    padding-bottom: 70px;
+}
+
+@media (max-width: 650px) {
+
+    .banner {
+        padding: 140px 20px 40px;
+    }
+
+    .apresentacao h1 {
+        font-size: 28px;
+    }
+
+    .historia h2,
+    .missao h2,
+    .servicos h2 {
+        font-size: 22px;
+    }
+}

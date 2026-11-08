@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dienifer Silveira f.">
+    <meta name="description" content="Veja os imóveis disponíveis da Imobiliária Jorge Alves: apartamentos, terrenos e imóveis comerciais.">
+    <meta name="keywords" content="imóveis disponíveis, apartamento, terreno, comercial, Içara">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/imoveis.css">
+    <title>Imóveis | Imobiliária Jorge Alves</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="menu-esquerdo">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="imoveis.html">Imóveis</a></li>
+            </ul>
+        </nav>
+
+        <a href="index.html" class="logo-central">
+            <img src="img/logocentro.png" alt="Logo Imobiliária Jorge Alves">
+        </a>
+
+        <nav class="menu-direito">
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contatos.html">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="banner">
+
+            <img class="logo-banner" src="img/logo-banner.png" alt="Logo da Imobiliária Jorge Alves">
+
+            <h2>Encontre o imóvel ideal para você!</h2>
+
+            <p>Encontre o lugar perfeito para começar uma nova história.</p>
+
+            <img class="imagem-banner" src="img/icardalvania_91291.jpg" alt="Vista de Içara">
+
+        </section>
+        <section>
+            <h2>Encontre seu imóvel ideal</h2>
+
+            <form action="imoveis.html" method="get">
+                <label for="cidade">Cidade</label>
+                <select id="cidade" name="cidade">
+                    <option value="todas" selected>Todas</option>
+                    <option value="icara">Içara</option>
+                    <option value="cocaldosul">Cocal do Sul</option>
+                    <option value="criciuma">Criciúma</option>
+                </select>
+
+                <label for="tipo">Tipo de imóvel:</label>
+                <select id="tipo" name="tipo">
+                    <option value="todos" selected>Todos</option>
+                    <option value="casa">Casa</option>
+                    <option value="apartamento">Apartamento</option>
+                    <option value="terreno">Terreno</option>
+                    <option value="comercial">Comercial</option>
+                </select>
+
+                <label for="valor">Valor máximo:</label>
+                <select id="valor" name="valor">
+                    <option value="todos" selected>Todos</option>
+                    <option value="150">Até R$ 150.000</option>
+                    <option value="300">Até R$ 300.000</option>
+                    <option value="500">Até R$ 500.000</option>
+                    <option value="800">Até R$ 800.000</option>
+                </select>
+
+                <label for="quartos">Quartos:</label>
+                <select id="quartos" name="quartos">
+                    <option value="todos" selected>Todos</option>
+                    <option value="1">1 quarto</option>
+                    <option value="2">2 quartos</option>
+                    <option value="3">3 quartos</option>
+                    <option value="4">4 ou mais quartos</option>
+                </select>
+
+                <button type="submit">Pesquisar</button>
+            </form>
+        </section>
+        <section>
+
+            <h2>Imóveis disponíveis</h2>
+
+            <article data-cidade="icara" data-tipo="apartamento" data-valor="230000" data-quartos="2">
+
+                <img src="img/sanmarco_resi.jpeg" alt="Residencial San Marco">
+
+                <h3>Residencial San Marco</h3>
+
+                <p>Tereza Cristina - Içara/SC</p>
+                <p>R$ 230.000,00</p>
+                <p>2 dormitórios | 1 suíte</p>
+                <p>Sacada com churrasqueira e lazer completo.</p>
+
+                <a href="detalhes-san-marco.html">Ver detalhes</a>
+
+            </article>
+
+            <article data-cidade="icara" data-tipo="apartamento" data-valor="490000" data-quartos="2">
+
+                <img src="img/apartamento_centro-icara.jpeg" alt="Apartamento no centro de Içara">
+
+                <h3>Apartamento no Centro de Içara</h3>
+
+                <p>Centro - Içara/SC</p>
+                <p>R$ 490.000,00</p>
+                <p>75,64m² | 2 dormitórios | 1 suíte</p>
+                <p>Cozinha mobiliada, sacada fechada em vidro e garagem.</p>
+
+                <a href="detalhes-apartamento.html">Ver detalhes</a>
+
+            </article>
+
+            <article data-cidade="icara" data-tipo="comercial" data-valor="790000" data-quartos="4">
+
+                <img src="img/comercial_primerodemaio.jpeg" alt="Imóvel comercial em Içara">
+
+                <h3>Imóvel Comercial - Primeiro de Maio</h3>
+
+                <p>Primeiro de Maio - Içara/SC</p>
+                <p>R$ 790.000,00</p>
+                <p>182m² | 4 dormitórios | Garagem para até 3 veículos</p>
+                <p>Estrutura versátil para clínicas, escritórios e empresas, com edícula de 30m².</p>
+
+                <a href="detalhes-imovel-comercial.html">Ver detalhes</a>
+
+            </article>
+
+            <article data-cidade="icara" data-tipo="terreno" data-valor="150000" data-quartos="0">
+
+                <img src="img/terreno_jd_elizabeth.jpeg" alt="Terreno no Jardim Elizabeth">
+
+                <h3>Terreno no Jardim Elizabeth</h3>
+
+                <p>Jardim Elizabeth - Içara/SC</p>
+                <p>R$ 150.000,00</p>
+                <p>361m² | 12,60 x 28,65</p>
+                <p>Terreno com boa localização, próximo ao Fórum e aos principais comércios da região.</p>
+
+                <a href="detalhes-terreno.html">Ver detalhes</a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Imobiliária Jorge Alves. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/filtro.js"></script>
+</body>
+
+</html>
